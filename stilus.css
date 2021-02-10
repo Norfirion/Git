@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+body{
+box-sizing: border-box;
+background-image: url("kepek/lol2.png");
+font-family: Arial, Verdana, sans-serif;
+color: beige;
+font-size: 10px;
+margin: 0px;
+}
+
+main{
+width: 90%;
+max-width: 900px;
+text-align: center;
+background-color: #C8C8C8;
+margin:auto;
+}
+
+main{
+    display:grid;
+    grid-template-areas:
+        "h h h h h"
+        "n n n n n"
+        "a a a a a"
+        "f f f f f"
+        ;
+    grid-gap:25px;
+}
+header{
+    grid-area:h;
+    background-image: url("kepek/images.png");
+    background-size:cover;
+    height:400px;
+    
+}
+nav{
+    grid-area:n;
+    background-color: #300000;
+}
+nav a{
+     color: white;
+}
+nav ul{
+    text-decoration: none;
+}
+nav li{
+    list-style-type: none;
+    width:20%;
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav li:hover{
+    background-color: #6192ec;
+    background-size: 300px;
+}
+article{
+    grid-area:a;
+    text-align:justify;
+    font-size:15px;
+    padding-left:5px;
+    color: #300000;
+}
+article h1{
+    font-size:20px;
+}
+footer{
+    grid-area:f;
+    background-color:#6192ec;
+}
+@media screen and (max-width:700px){
+    main{
+        grid-template-areas:
+            "h "
+            "n "
+            "a "
+            "f "
+            ;
+    }
+    img{
+        width:100%;
+    }
+    
+}
